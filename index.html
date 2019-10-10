@@ -7,33 +7,213 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link href="https://fonts.googleapis.com/css?family=Notable&display=swap" rel="stylesheet">
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    
 </head>
+<header>
+        <div>
+                <h1>    TRIVIA GAME     </h1>
+        </div>
+</header>
 <body>
-<div class="wrapper">
-    <div>
-        <p>Question</p>
-    </div>
 
-    <div>
-        <p>Question</p>
-    </div>
+                        ​
+                <!-- question form -->
+                <div id="btnBackground">
+                    <p id="startTitle">Click to start!</p>
+                <button type="button" id="startBtn" class="btn btn-primary btn-lg">Start</button>
+                </div>
 
-    <div>
-        <p>Question</p>
-    </div>
+    <form class="questionsFrm">  <!-- countdown clock -->        
+         <!--use span bc time remaiinig is going to display as text-->
+         <div id="clock">Time Remaining: <span id="timeRemaining"><span>
+           
+         </div>
+        
+        <div class="container">
+         
+            <p class="Qs">Who stared in "See No Evil, Hear No Evil"(1989)? </p>
+                    <!--insert boot strap forms here with values the correct answer for each question will have "correct" --  var score ++ -- value if else no points -->
+                <form class="qInput">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="checkBox" value="correct">
+                            <label class="form-check-label" for="inlineCheckbox1">Richard Pryor & Gene Wilder</label>
+                    </div>
 
-    <div>
-        <p>Question</p>
-    </div>
-    <div>
-        <p>Question</p>
-    </div>
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="checkBox" value="wrong">
+                                <label class="form-check-label" for="inlineCheckbox1">Mike Epps</label>
+                    </div>
+                    
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="checkBox" value="wrong">
+                                <label class="form-check-label" for="inlineCheckbox1">Liza Minelli</label>
+                    </div>
+
+                        <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="checkBox" value="wrong">
+                                    <label class="form-check-label" for="inlineCheckbox1">Jane Fonda</label>
+                            </div>
+                </form>
+            
+            
+                
+        
+            
+                    <p class="Qs"> What year did the production of "The Wizard of Oz" start?</p>
+                    <form class="qInput">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="checkBox" value="wrong">
+                                <label class="form-check-label" for="inlineCheckbox1">1918</label>
+                        </div>
+    
+                        <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="checkBox" value="wrong">
+                                    <label class="form-check-label" for="inlineCheckbox1">1922</label>
+                            </div>             
+    
+                            <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="checkBox" value="correct">
+                                        <label class="form-check-label" for="inlineCheckbox1">1939</label>
+                                </div>
+                                              
+                                <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="checkBox" value="wrong">
+                                            <label class="form-check-label" for="inlineCheckbox1">1948</label>
+                                    </div>
+                        </form>
+                
+        
+                
+                        <p class="Qs"> which movie did Adam Sandler star in?</p>
+                        <form class="qInput">
+        
+        
+                                <!--insert boot strap forms here with values the correct answer for each question will have "correct" -- 
+                                    var score ++ -- value if else no points -->
+                                    <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="checkBox" value="correct">
+                                            <label class="form-check-label" for="inlineCheckbox1">Billy Madison</label>
+                                          </div>
+        
+                                          <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="checkBox" value="wrong">
+                                                <label class="form-check-label" for="inlineCheckbox1">Blade</label>
+                                              </div>
+        
+                                              <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="checkBox" value="wrong">
+                                                    <label class="form-check-label" for="inlineCheckbox1">8 Mile</label>
+                                                  </div>
+                                                  
+                                                  <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="checkBox" value="wrong">
+                                                        <label class="form-check-label" for="inlineCheckbox1">Gone With the Wind</label>
+                                                      </div>
+                            </form>
+                    
+        
+                    
+                            <p class="Qs">How many SuperBowl rings does Tom Brady have? </p>
+                            <form class="qInput">
+            
+            
+                                    <!--insert boot strap forms here with values the correct answer for each question will have "correct" -- 
+                                        var score ++ -- value if else no points -->
+                                        <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="checkBox" value="option1">
+                                                <label class="form-check-label" for="inlineCheckbox1">1</label>
+                                              </div>
+
+                                              <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="checkBox" value="option1">
+                                                    <label class="form-check-label" for="inlineCheckbox1">1</label>
+                                                  </div>
+                                                  <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="checkBox" value="option1">
+                                                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                                                      </div>
+                                                      <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="checkbox" id="checkBox" value="option1">
+                                                            <label class="form-check-label" for="inlineCheckbox1">1</label>
+                                                          </div>
+                                </form>
+                        
+        
+                        
+                                <p class="Qs">How many movies are in the Harry Potter series?</p>
+                                <form class="qInput">
+                
+                
+                                        <!--insert boot strap forms here with values the correct answer for each question will have "correct" -- 
+                                            var score ++ -- value if else no points -->
+                                            <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="checkBox" value="option1">
+                                                    <label class="form-check-label" for="inlineCheckbox1">10</label>
+                                                  </div>
+                
+                                                  <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="checkBox" value="option1">
+                                                        <label class="form-check-label" for="inlineCheckbox1">6</label>
+                                                      </div>
+                
+                                                      <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="checkbox" id="checkBox" value="option1">
+                                                            <label class="form-check-label" for="inlineCheckbox1">8</label>
+                                                          </div>
+                                                          
+                                                          <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="checkbox" id="checkBox" value="option1">
+                                                                <label class="form-check-label" for="inlineCheckbox1">7</label>
+                                                              </div>
+                                    </form>
+                                    <p class="Qs"> Who directed "the Goonies"?</p>
+                                    <form class="qInput">
+                    
+                    
+                                            <!--insert boot strap forms here with values the correct answer for each question will have "correct" -- 
+                                                var score ++ -- value if else no points -->
+                                                <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="checkBox" value="option1">
+                                                        <label class="form-check-label" for="inlineCheckbox1">Steven Spielberg</label>
+                                                      </div>
+                    
+                                                      <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="checkbox" id="checkBox" value="option1">
+                                                            <label class="form-check-label" for="inlineCheckbox1">Mark Zuckerberg</label>
+                                                          </div>
+                    
+                                                          <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="checkbox" id="checkBox" value="option1">
+                                                                <label class="form-check-label" for="inlineCheckbox1">Adam Sandler</label>
+                                                              </div>
+                                                              
+                                                              <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="checkbox" id="checkBox" value="option1">
+                                                                    <label class="form-check-label" for="inlineCheckbox1">Stephen King</label>
+                                                                  </div>
+                                        </form>
+                                    
+        </div>
+        <button id="answerCheck">Check Answers</button>
+    </form>
+
+
+  
+
+
+
+<script src="assets/javascript/app.js">
 
 
 
 
-</div>
+  </script>
+
     
 </body>
 </html>
