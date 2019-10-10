@@ -12,9 +12,16 @@ $(document).ready(function(){
     $(".Qs").hide();
     $(".qInput").hide();
     $(".questionsFrm").hide();
+    $("#wrong").hide();
+    $("#correct").hide();
+    $("#unanswered").hide();
+    $(".summary").hide();
+    $("#answerCheck").hide();
    
     // setup variables
     var seconds = 30;
+    var wrongAnswer = 0;
+   var correctAnswer = $("input[value=correct]:checked").length;
     
 
     
@@ -28,7 +35,8 @@ $(document).ready(function(){
         $("#btnBackgrouns").hide();
         $("#startBtn").hide();
         $("#startTitle").hide();
-
+        $("#answerCheck").show();
+        
             $("#timeRemaining").text(timerCount);
 
             timerCount();
@@ -44,7 +52,7 @@ $(document).ready(function(){
                 $("#timeRemaining").text(seconds + " seconds");
                 seconds--;
                 if (seconds === 0) {
-                    setTimeout();
+                    setTimeout(seconds);
                 
                     
                     
@@ -61,8 +69,13 @@ $(document).ready(function(){
         $("<input>").on("change", function() {
            userCoice= $(this).val();
            console.log(userCoice);
-            wrongAnswer = $("#checkBox").val("wrong");
-           
+            wrongAnswer = $("input[value=wrong]:checked").length;
+           if (userCoice===wrongAnswer){
+            $("#wrong").text("wrong answers: " + wrongAnswer);
+           }
+           else{
+            $("#correct").text("correct answers: " + correctAnswer);
+           }
             
     })
 
